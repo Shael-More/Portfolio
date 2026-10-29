@@ -8,7 +8,7 @@ const projects = [
     image: '/images/bucket.png',
     tags: ['React', 'Tailwind CSS', 'Redux'],
     demoUrl: 'https://bucket-list-ecomm.netlify.app',
-    githubUrl: '#',
+    
   },
   {
     id: 2,
@@ -17,16 +17,25 @@ const projects = [
     image: '/images/Grid.png',
     tags: ['React', 'Tailwind CSS'],
     demoUrl: 'https://propertygrid-app.netlify.app',
-    githubUrl: '#',
+    
   },
   {
     id: 3,
     title: 'Taco-House',
     description: 'A place to have the best food with your buddies.',
     image: '/images/taco.png',
-    tags: ['React', 'React Router'],
+    tags: ['HTML', 'CSS', 'JS'],
     demoUrl: 'https://tacohousee.netlify.app',
-    githubUrl: '#',
+    
+  },
+  {
+    id: 4,
+    title: 'Rentify',
+    description: 'Van rental web app.',
+    image: '/images/Renti.png',
+    tags: ['React', 'React Router'],
+    demoUrl: 'https://rentify-web-app.netlify.app',
+    
   },
 ];
 
@@ -80,13 +89,13 @@ export const ProjectsSection = () => {
                     >
                       <ExternalLink size={20} />
                     </a>
-                    <a
+                    {/* <a
                       href={project.githubUrl}
                       className='text-foreground/80 hover:text-primary transition-colors duration-300'
                       target='_blank'
                     >
                       <Github size={20} />
-                    </a>
+                    </a> */}
                   </div>
                 </div>
               </div>
