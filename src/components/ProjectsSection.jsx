@@ -3,29 +3,29 @@ import { ArrowRight, ExternalLink, Github } from 'lucide-react';
 const projects = [
   {
     id: 1,
-    title: 'Project Name ',
-    description: '',
-    image: '',
-    tags: ['React', 'TailindCSS'],
-    demoUrl: '#',
+    title: 'Bucket-List',
+    description: 'An e-commerce website.',
+    image: '/images/bucket.png',
+    tags: ['React', 'Tailwind CSS', 'Redux'],
+    demoUrl: 'https://bucket-list-ecomm.netlify.app',
     githubUrl: '#',
   },
   {
     id: 2,
-    title: 'Project Name ',
-    description: '',
-    image: '',
-    tags: ['React', 'TailindCSS'],
-    demoUrl: '#',
+    title: 'PropertyGrid ',
+    description: 'A place to find your dream home.',
+    image: '/images/Grid.png',
+    tags: ['React', 'Tailwind CSS'],
+    demoUrl: 'https://propertygrid-app.netlify.app',
     githubUrl: '#',
   },
   {
     id: 3,
-    title: 'Project Name ',
-    description: '',
-    image: '',
-    tags: ['React', 'TailindCSS'],
-    demoUrl: '#',
+    title: 'Taco-House',
+    description: 'A place to have the best food with your buddies.',
+    image: '/images/taco.png',
+    tags: ['React', 'React Router'],
+    demoUrl: 'https://tacohousee.netlify.app',
     githubUrl: '#',
   },
 ];
@@ -94,7 +94,13 @@ export const ProjectsSection = () => {
           ))}
         </div>
         <div className='text-center mt-12'>
-          <a href="https://github.com/shaelmore" className='cosmic-button w-fit flex items-center mx-auto gap-2 ' target='_black'>Check My Github <ArrowRight size={16}/></a>
+          <a
+            href='https://github.com/Shael-More'
+            className='cosmic-button w-fit flex items-center mx-auto gap-2 '
+            target='_black'
+          >
+            Check My Github <ArrowRight size={16} />
+          </a>
         </div>
       </div>
     </section>

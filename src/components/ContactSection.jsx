@@ -1,13 +1,11 @@
 import { Github, Linkedin, Mail, MapPin, Phone, Send } from 'lucide-react';
-import {cn} from '../lib/utils'
+import { cn } from '../lib/utils';
 export const ContactSection = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    setTimeout(() => {
-
-    }, 1500)
-  }
+    setTimeout(() => {}, 1500);
+  };
   return (
     <section id='contact' className='py-24 px-4 relative bg-secondary/30'>
       <div className='container mx-auto max-w-5xl'>
@@ -20,17 +18,16 @@ export const ContactSection = () => {
         </p>
 
         <div className='grid grid-cols-1 md:grid-cols-2 gap-12'>
-          <div className='space-y-8'>
+          <div className='space-y-8 flex flex-col justify-center items-center'>
             <h3 className='text-2xl font-semibold mb-12'>
               Contact Information
             </h3>
-
             <div className='space-y-6 justify-center'>
               <div className='flex items-start space-x-4'>
                 <div className='p-3 rounded-full bg-primary/30'>
                   <Mail className='h-6 w-6 text-primary' />
                 </div>
-                <div>
+                <div className='flex flex-col items-start'>
                   <h4 className='font-medium'> Email</h4>
                   <a
                     href='mailto:Shaelmore@gmail.com'
@@ -44,7 +41,7 @@ export const ContactSection = () => {
                 <div className='p-3 rounded-full bg-primary/30'>
                   <Phone className='h-6 w-6 text-primary' />
                 </div>
-                <div>
+                <div className='flex flex-col items-start'>
                   <h4 className='font-medium'> Phone</h4>
                   <a
                     href='tel:+919039477516'
@@ -58,7 +55,7 @@ export const ContactSection = () => {
                 <div className='p-3 rounded-full bg-primary/30'>
                   <MapPin className='h-6 w-6 text-primary' />
                 </div>
-                <div>
+                <div className='flex flex-col items-start'>
                   <h4 className='font-medium'> Location</h4>
                   <a
                     href='mailto:Shaelmore@gmail.com'
@@ -72,12 +69,12 @@ export const ContactSection = () => {
             <div className='pt-8 '>
               <h4 className='font-medium mb-4'>Connect With Me</h4>
               <div className='flex space-x-4 justify-center'>
-                <a href='#' target='_blank'>
+                <a href='https://github.com/Shael-More' target='_blank'>
                   <Github />
                 </a>
-                <a href='#' target='_blank'>
+                {/* <a href='#' target='_blank'>
                   <Linkedin />
-                </a>
+                </a> */}
                 <a href='#' target='_blank'></a>
                 <a href='#' target='_blank'></a>
               </div>
@@ -134,7 +131,12 @@ export const ContactSection = () => {
                   required
                 />
               </div>
-              <button type='submit' className={cn("cosmic-button w-full flex items-center justify-center gap-2")}>
+              <button
+                type='submit'
+                className={cn(
+                  'cosmic-button w-full flex items-center justify-center gap-2',
+                )}
+              >
                 Send Message
                 <Send size={16} />
               </button>
