@@ -1,5 +1,17 @@
 import { Briefcase, Code, User } from 'lucide-react';
 
+const file = 'http://localhost:5173/Resume.pdf';
+
+const downloadFile = (file) => {
+  const fileName = file.split('/').pop()
+  const aTag = document.createElement('a')
+  aTag.href = file
+  aTag.setAttribute('download', fileName)
+  document.body.appendChild(aTag)
+  aTag.click()
+  aTag.remove()
+}
+
 export const AboutSection = () => {
   return (
     <section id='about' className='py-24 px4 relative'>
@@ -30,12 +42,13 @@ export const AboutSection = () => {
               <a href='#contact' className='cosmic-button'>
                 Get In Touch
               </a>
-              <a
-                href=''
+              <button
+                // href=''
                 className='px-6 py-2 rounded-full border border-primary text-primary hover:bg-primary/10  transition-colors duration-300'
+                onClick={() => downloadFile(file)}
               >
                 Download CV
-              </a>
+              </button>
             </div>
           </div>
 
@@ -63,7 +76,8 @@ export const AboutSection = () => {
                 <div className='text-left'>
                   <h4 className='font-semibold text-lg'>UI/UX Design</h4>
                   <p className='text-muted-foreground'>
-                    Designing intuitive user interfaces and seamless user experiences. 
+                    Designing intuitive user interfaces and seamless user
+                    experiences.
                   </p>
                 </div>
               </div>
@@ -77,7 +91,8 @@ export const AboutSection = () => {
                 <div className='text-left'>
                   <h4 className='font-semibold text-lg'>Project Management</h4>
                   <p className='text-muted-foreground'>
-                    Leading projects from conception to completion with agile methodologies.
+                    Leading projects from conception to completion with agile
+                    methodologies.
                   </p>
                 </div>
               </div>
